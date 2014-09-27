@@ -236,7 +236,7 @@ for i in text_dirs:
                 title                = "Metadata Missing. See: " + text_filename
                 publication_year     = "Metadata Missing. See: " + text_filename
                 
-                print "113",j
+                print "error at 239 with file ", j
                 
             #######################
             # Index File Segments #
@@ -255,32 +255,32 @@ for i in text_dirs:
                 try:
 			unicode_text_path        = unicode(j, path_encoding)
 		except Error as er:
-			print "error at 139 with file", j, er
+			print "error at 258 with file", j, er
 					
 		try:
 			unicode_encoding         = unicode(text_content_encoding)
 		except Error as er:
-			print "error at 144 with file", j, er
+			print "error at 263 with file", j, er
 					
                 try:
 			unicode_content          = decoded_content
 		except Error as er:
-			print "error at 149 with file", j, er
+			print "error at 268 with file", j, er
 					
 		try:
 			unicode_title            = unicode(title, "utf-8")
 		except Error as er:
-			print "error at 154 with file", j, er
+			print "error at 273 with file", j, er
 					
 		try:
 			unicode_author           = unicode(author, "utf-8")
 		except Error as er:
-			print "error at 159 with file", j, er
+			print "error at 278 with file", j, er
                 
 		try:
 			unicode_publication_year = unicode(publication_year, "utf-8")
 		except Error as er:
-			print "error at 164 with file", j, er
+			print "error at 283 with file", j, er
                     
                 #use writer method to add document to index
                 writer.add_document( path = unicode_text_path, encoding = unicode_encoding, content = unicode_content, author = unicode_author, title = unicode_title, publication_year = unicode_publication_year )
