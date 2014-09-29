@@ -93,7 +93,7 @@ def create_ecco_metadata_dictionary():
 
 def create_early_english_drama_metadata_dictionary():
 
-    with open("/afs/crc.nd.edu/user/d/dduhaime/data/metadata/lion_drama_metadata.txt") as metadata_in:
+    with open("/afs/crc.nd.edu/user/d/dduhaime/data/metadata/drama_metadata.txt") as metadata_in:
         
         early_english_drama_metadata_dictionary = {}
         
@@ -214,7 +214,7 @@ for i in text_dirs:
                     title            = ecco_metadata[text_filename]["title"]
                     publication_year = ecco_metadata[text_filename]["publication_year"]
                     
-                if "Lion_Drama" in j:
+                if "drama" in j:
                     author           = early_english_metadata[text_filename]["author"]
                     title            = early_english_metadata[text_filename]["title"]
                     publication_year = early_english_metadata[text_filename]["publication_year"]
